@@ -1,30 +1,9 @@
 
-# Linketinder
+#ZG-HERO-PROJECT
 
-O presente projeto trata-se da aplicação de listas de empresas e possíveis candidatos a vagas para essas empresas.
+O presente repositório guarda alguns projetos realizados durante o AceleraZG.
 
+## Acesso aos projetos
 
-
-## Stack utilizada
-
-**Back-end:** groovy 4.0.14
-              java 1.8 
-
-**Ide** Intellij
-
-
-## Rodando localmente
-
-Clone o projeto
-
-```bash
-  git clone https://github.com/Geovane-Andrade/ZG-HERO-Project
-```
-
-Entre no diretório do projeto por meio da Ide
-
-Encontre a classe main que está na package: 
-
-     ZG-HERO-Project/Linketinder/src/com/acelerazg/linketinder/Main.groovy
-
-Rode a classe main e iniciará o projeto.
+Cada projeto estará em uma pasta nomeada com seu respectivo nome, acessando a pasta terá acesso ao projeto
+assim como o readme do mesmo e arquivos pertinentes dele.
