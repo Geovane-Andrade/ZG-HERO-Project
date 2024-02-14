@@ -37,7 +37,7 @@ class PessoaFisica extends Pessoa{
                 "nome='" + nome + '\'' +
                 ", idade=" + idade +
                 ", email='" + email + '\'' +
-                ", identificador='" + identificador + '\'' +
+                ", cpf='" + identificador + '\'' +
                 ", estado='" + estado + '\'' +
                 ", cep='" + cep + '\'' +
                 ", descricao='" + descricao + '\'' +
