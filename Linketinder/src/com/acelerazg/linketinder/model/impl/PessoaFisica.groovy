@@ -15,7 +15,7 @@ class PessoaFisica extends Pessoa{
 
     @Override
     void listarPessoas() {
-        def candidatos = new ArrayList()
+        List<PessoaFisica> candidatos = new ArrayList()
         candidatos.add(new PessoaFisica("João", "joao@gmail.com", 29, "109.405.981-50",
                 "Minas Gerais", "50498-804", "Casado, tem 3 filhos e é formado em ciências da computação", ["Java", "Vue", "Postgres"]))
         candidatos.add(new PessoaFisica("Fernanda", "fernanda@gmail.com", 20, "195.321.754-15",
