@@ -1,8 +1,7 @@
-package com.acelerazg.linketinder.model.impl
+package com.acelerazg.linketinder.model
 
-import com.acelerazg.linketinder.model.PessoaInterface
 
-class Pessoa implements PessoaInterface{
+class Pessoa {
 
     String nome
     String email
@@ -26,7 +25,7 @@ class Pessoa implements PessoaInterface{
         this.competencias = competencias
     }
 
-    @Override
+
     void listarPessoas() {
 
     }

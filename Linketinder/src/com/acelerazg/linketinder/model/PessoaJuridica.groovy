@@ -1,5 +1,4 @@
-package com.acelerazg.linketinder.model.impl
-
+package com.acelerazg.linketinder.model
 
 class PessoaJuridica extends Pessoa{
     String pais

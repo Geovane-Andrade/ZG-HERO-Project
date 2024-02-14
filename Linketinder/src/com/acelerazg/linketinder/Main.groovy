@@ -1,6 +1,6 @@
 package com.acelerazg.linketinder
 
-import com.acelerazg.linketinder.model.impl.PessoaFisica
+import com.acelerazg.linketinder.model.PessoaFisica
 import com.acelerazg.linketinder.model.impl.PessoaJuridica
 
 //Geovane de Andrade
