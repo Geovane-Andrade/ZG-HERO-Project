@@ -1,5 +1,5 @@
 
-#ZG-HERO-PROJECT
+# ZG-HERO-PROJECT
 
 O presente repositório guarda alguns projetos realizados durante o AceleraZG.
 
