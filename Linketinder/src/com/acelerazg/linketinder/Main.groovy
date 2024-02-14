@@ -3,6 +3,7 @@ package com.acelerazg.linketinder
 import com.acelerazg.linketinder.model.impl.PessoaFisica
 import com.acelerazg.linketinder.model.impl.PessoaJuridica
 
+//Geovane de Andrade
 PessoaFisica pessoaFisica = new PessoaFisica()
 PessoaJuridica pessoaJuridica = new PessoaJuridica()
 
