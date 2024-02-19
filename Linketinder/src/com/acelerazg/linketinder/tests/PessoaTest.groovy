@@ -1,5 +1,6 @@
 package com.acelerazg.linketinder.tests
 
+import com.acelerazg.linketinder.controller.PessoaFisicaController
 import com.acelerazg.linketinder.model.PessoaFisica
 import org.junit.jupiter.api.Test
 
@@ -14,8 +15,9 @@ class PessoaTest {
                 "Casado, tem 2 filhos e cursando ciências da computação",
                 ["Groovy", "Angular", "MongoDB"])
 
-        candidato.adicionarCandidato()
+        PessoaFisicaController pessoaFisicaController = new PessoaFisicaController().
+        pessoaFisicaController.adicionarCandidato(candidato)
 
-        assertEquals(candidato.id, 6)
+        assertEquals(pessoaFisicaController.getCandidatos().size(), 1)
     }
 }
