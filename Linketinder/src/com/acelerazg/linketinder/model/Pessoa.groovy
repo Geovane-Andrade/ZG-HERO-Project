@@ -2,7 +2,7 @@ package com.acelerazg.linketinder.model
 
 
 class Pessoa {
-
+    Integer id
     String nome
     String email
     String identificador
@@ -14,8 +14,9 @@ class Pessoa {
     Pessoa() {
     }
 
-    Pessoa(String nome, String email, String identificador, String estado,
+    Pessoa(Integer id, String nome, String email, String identificador, String estado,
            String cep, String descricao, ArrayList competencias) {
+        this.id = id
         this.nome = nome
         this.email = email
         this.identificador = identificador
@@ -25,10 +26,6 @@ class Pessoa {
         this.competencias = competencias
     }
 
-
-    void listarPessoas() {
-
-    }
 
 
 }

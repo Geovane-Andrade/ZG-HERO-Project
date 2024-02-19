@@ -1,10 +1,11 @@
 package com.acelerazg.linketinder
 
+import com.acelerazg.linketinder.controller.PessoaFisicaController
 import com.acelerazg.linketinder.model.PessoaFisica
 import com.acelerazg.linketinder.model.PessoaJuridica
 
 //Geovane de Andrade
-PessoaFisica pessoaFisica = new PessoaFisica()
+PessoaFisicaController pessoaFisicaController = new PessoaFisicaController()
 PessoaJuridica pessoaJuridica = new PessoaJuridica()
 
 println("---------------------------------")
@@ -28,7 +29,8 @@ try {
 
         switch (resposta) {
             case 1: {
-                pessoaFisica.listarPessoas()
+                pessoaFisicaController.preCadastrar()
+                pessoaFisicaController.listarPessoas()
                 break
             }
             case 2: {
