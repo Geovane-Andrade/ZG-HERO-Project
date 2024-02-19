@@ -27,7 +27,7 @@ class PessoaFisicaController {
         candidatos.add(pessoaFisica)
     }
 
-    void criarCandidato() {
+    PessoaFisica criarCandidato() {
         System.out.println("Qual o id da pessoa candidata? [Somente números acima de 6]\n")
         Integer id = System.in.newReader().readLine() as Integer
         int i = 0
@@ -70,13 +70,13 @@ class PessoaFisicaController {
         ArrayList<String> competenciasParaAdicionar = new ArrayList(5)
 
         for (i = 0; i < quantidadeCompetencias; i++) {
-            println("Qual a " + i + " competência?")
+            println("Qual a " + i+1 + " competência?")
             String competencia = System.in.newReader().readLine()
             competenciasParaAdicionar.add(competencia)
         }
 
-        candidatos.add(new PessoaFisica(id, nome, email, idade, identificador,
-                estado, cep, descricao, competenciasParaAdicionar))
+        return new PessoaFisica(id, nome, email, idade, identificador,
+                estado, cep, descricao, competenciasParaAdicionar)
     }
 
 

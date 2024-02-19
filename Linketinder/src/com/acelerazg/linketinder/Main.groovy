@@ -19,7 +19,8 @@ try {
         System.out.println("Seja bem vindo! Digite o número de acordo com o que deseja: \n" +
                 "[1] Listar Candidatos\n" +
                 "[2] Listar Empresas\n" +
-                "[3] Encerrar programa."
+                "[3] Criar Candidato\n" +
+                "[4] Encerrar programa."
         )
 
         Integer resposta = System.in.newReader().readLine() as Integer
@@ -37,10 +38,14 @@ try {
                 pessoaJuridica.listarPessoas()
                 break
             }
-            case 3: {
+            case 3:{
+                pessoaFisicaController.adicionarCandidato(pessoaFisicaController.criarCandidato())
+                break
+            }
+            case 4: {
                 reproduz = "n"
                 System.out.println("Encerrando...")
-                break
+                break;
             }
             default: {
                 System.out.println("Digite um número válido.")
