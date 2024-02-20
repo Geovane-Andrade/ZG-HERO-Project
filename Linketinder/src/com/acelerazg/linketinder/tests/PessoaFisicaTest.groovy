@@ -10,15 +10,15 @@ class PessoaFisicaTest {
 
     @Test
     void adicionaCandidatoTeste(){
-        PessoaFisica claudio = new PessoaFisica(6,"Cláudio", "claudio@hotmail.com", 35,
+        PessoaFisica claudio = new PessoaFisica("Cláudio", "claudio@hotmail.com", 35,
                 "126.325.264-21", "Acre", "16593-804",
                 "Casado, tem 2 filhos e cursando ciências da computação",
                 ["Groovy", "Angular", "MongoDB"])
-        PessoaFisica fernanda = new PessoaFisica(7,"fernanda", "fernanda@hotmail.com", 35,
+        PessoaFisica fernanda = new PessoaFisica("fernanda", "fernanda@hotmail.com", 35,
                 "265.498.356-01", "Rio grande do norte", "75421-423",
                 "Divorciada, tem 2 filhos e cursando engenharia de software",
                 ["Java", "Spring", "MySQL"])
-        PessoaFisica fabiana = new PessoaFisica(8,"Fabiana", "fabiana@hotmail.com", 35,
+        PessoaFisica fabiana = new PessoaFisica("Fabiana", "fabiana@hotmail.com", 35,
                 "351.274.779-43", "Ceará", "66952-005",
                 "Casada, tem 1 filhos e graduada em ciências da computação",
                 ["Java", "Angular", "MongoDB"])

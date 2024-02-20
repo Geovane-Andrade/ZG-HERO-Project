@@ -10,13 +10,13 @@ class PessoaJuridicaTeste {
 
     @Test
     void adicionaPessoaJuridicaTeste() {
-        PessoaJuridica nvidia = new PessoaJuridica(6,"Nvidia", "nvidia@hotmail.com",
+        PessoaJuridica nvidia = new PessoaJuridica("Nvidia", "nvidia@hotmail.com",
                 "85.588.461/0001-46","Brasil", "Goiás", "76600-000",
                 "Empresa que atua no ramo de tecnologia", ["Typescript", "Groovy", "Grails", "Angular"])
-        PessoaJuridica zgSolucoes = new PessoaJuridica(7,"ZG Soluções", "zg@hotmail.com",
+        PessoaJuridica zgSolucoes = new PessoaJuridica("ZG Soluções", "zg@hotmail.com",
                 "91.465.384/0001-37","Brasil", "Goiás", "76600-000",
                 "Empresa que atua no ramo de tecnologia", ["Java", "Groovy", "Grails", "Angular", "Postgres"])
-        PessoaJuridica intel = new PessoaJuridica(8,"ZG Soluções", "zg@hotmail.com",
+        PessoaJuridica intel = new PessoaJuridica("ZG Soluções", "zg@hotmail.com",
                 "91.465.384/0001-37","Brasil", "Maranhão", "80600-000",
                 "Empresa que atua no ramo de tecnologia", ["Java", "Groovy", "Spring", "React", "MariaDB"])
 
