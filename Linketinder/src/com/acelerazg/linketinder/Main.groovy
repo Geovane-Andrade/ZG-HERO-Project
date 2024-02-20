@@ -6,6 +6,7 @@ import com.acelerazg.linketinder.controller.PessoaJuridicaController
 //Geovane de Andrade
 PessoaFisicaController pessoaFisicaController = new PessoaFisicaController()
 PessoaJuridicaController pessoaJuridicaController = new PessoaJuridicaController()
+pessoaFisicaController.preCadastrarCandidatos()
 
 println("---------------------------------")
 println("Seja bem vindo! Gostaria de reproduzir o Linketinder? [S/N]");
@@ -14,8 +15,8 @@ String reproduz = System.in.newReader().readLine()
 
 try {
     while (reproduz.equalsIgnoreCase("S")) {
-        System.out.println("----------------------------------------------");
-        System.out.println("Seja bem vindo! Digite o número de acordo com o que deseja: \n" +
+        println("----------------------------------------------");
+        println("Seja bem vindo! Digite o número de acordo com o que deseja: \n" +
                 "[1] Listar Candidatos\n" +
                 "[2] Listar Empresas\n" +
                 "[3] Criar Candidato\n" +
@@ -25,17 +26,14 @@ try {
 
         Integer resposta = System.in.newReader().readLine() as Integer
 
-
         println("----------------------------------------------");
 
         switch (resposta) {
             case 1: {
-                pessoaFisicaController.preCadastrarCandidatos()
                 pessoaFisicaController.listarPessoas()
                 break
             }
             case 2: {
-                pessoaJuridicaController.preCadastrarEmpresas()
                 pessoaJuridicaController.listarPessoas()
                 break
             }
@@ -49,15 +47,15 @@ try {
             }
             case 5: {
                 reproduz = "n"
-                System.out.println("Encerrando...")
-                break;
+                println("Encerrando...")
+                break
             }
             default: {
-                System.out.println("Digite um número válido.")
+                println("Digite um número válido.")
             }
         }
     }
-    if (reproduz.equalsIgnoreCase("n")) System.out.println("Até a próxima!")
+    if (reproduz.equalsIgnoreCase("n")) println("Até a próxima!")
 } catch (NumberFormatException ignored) {
     println("Valor inválido, letras e símbolos não são aceitos! ")
 }
