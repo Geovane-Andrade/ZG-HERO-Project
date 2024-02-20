@@ -6,9 +6,9 @@ class PessoaFisica extends Pessoa {
     PessoaFisica() {
     }
 
-    PessoaFisica(Integer id, String nome, String email, Integer idade, String identificador,
+    PessoaFisica( String nome, String email, Integer idade, String identificador,
                  String estado, String cep, String descricao, ArrayList competencias) {
-        super(id, nome, email, identificador, estado, cep, descricao, competencias)
+        super( nome, email, identificador, estado, cep, descricao, competencias)
         this.idade = idade
     }
 

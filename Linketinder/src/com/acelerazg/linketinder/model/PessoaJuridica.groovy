@@ -6,16 +6,16 @@ class PessoaJuridica extends Pessoa{
     PessoaJuridica() {
     }
 
-    PessoaJuridica(Integer id, String nome, String email, String identificador, String pais,
+    PessoaJuridica( String nome, String email, String identificador, String pais,
                    String estado, String cep, String descricao, ArrayList competencias) {
-        super(id, nome, email, identificador, estado, cep, descricao, competencias)
+        super( nome, email, identificador, estado, cep, descricao, competencias)
         this.pais = pais
     }
 
 
     @Override
     public String toString() {
-        return "candidato{" +
+        return "Empresa{" +
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", cnpj='" + identificador + '\'' +

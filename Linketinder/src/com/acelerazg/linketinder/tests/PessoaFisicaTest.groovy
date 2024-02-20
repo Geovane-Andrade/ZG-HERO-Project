@@ -9,7 +9,7 @@ class PessoaFisicaTest {
 
 
     @Test
-    void adicionaCandidatoNalistaTeste(){
+    void adicionaCandidatoTeste(){
         PessoaFisica claudio = new PessoaFisica(6,"Cláudio", "claudio@hotmail.com", 35,
                 "126.325.264-21", "Acre", "16593-804",
                 "Casado, tem 2 filhos e cursando ciências da computação",
