@@ -5,7 +5,7 @@ import com.acelerazg.linketinder.model.PessoaFisica
 class PessoaFisicaController {
     List<PessoaFisica> candidatos = new ArrayList()
 
-    void preCadastrar() {
+    void preCadastrarCandidatos() {
         candidatos.add(new PessoaFisica(1, "João", "joao@gmail.com", 29, "109.405.981-50",
                 "Minas Gerais", "50498-804", "Casado, tem 3 filhos e é formado em ciências da computação",
                 ["Java", "Vue", "Postgres"]))
