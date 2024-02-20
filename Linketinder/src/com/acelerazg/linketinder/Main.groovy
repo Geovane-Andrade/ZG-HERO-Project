@@ -7,6 +7,7 @@ import com.acelerazg.linketinder.controller.PessoaJuridicaController
 PessoaFisicaController pessoaFisicaController = new PessoaFisicaController()
 PessoaJuridicaController pessoaJuridicaController = new PessoaJuridicaController()
 pessoaFisicaController.preCadastrarCandidatos()
+pessoaJuridicaController.preCadastrarEmpresas()
 
 println("---------------------------------")
 println("Seja bem vindo! Gostaria de reproduzir o Linketinder? [S/N]");

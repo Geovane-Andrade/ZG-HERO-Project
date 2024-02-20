@@ -71,14 +71,15 @@ class PessoaFisicaController {
             Integer quantidadeCompetencias = System.in.newReader().readLine() as Integer
             ArrayList<String> competenciasParaAdicionar = new ArrayList(5)
 
-            for (int i = 0; i < quantidadeCompetencias; i++) {
-                println("Qual a " + i + 1 + " competência?")
+            for (int i = 1; i <= quantidadeCompetencias; i++) {
+                println("Qual a " + i + "º competência?")
                 String competencia = System.in.newReader().readLine()
                 competenciasParaAdicionar.add(competencia)
             }
 
             return new PessoaFisica(id, nome, email, idade, identificador,
                     estado, cep, descricao, competenciasParaAdicionar)
+
         } catch (NumberFormatException ignored) {
             println("Valor inválido, letras e símbolos não são aceitos! ")
         }
