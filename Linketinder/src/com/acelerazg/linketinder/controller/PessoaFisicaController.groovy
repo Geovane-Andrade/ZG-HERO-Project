@@ -28,55 +28,60 @@ class PessoaFisicaController {
     }
 
     PessoaFisica criarCandidato() {
-        System.out.println("Qual o id da pessoa candidata? [Somente números acima de 6]\n")
-        Integer id = System.in.newReader().readLine() as Integer
-        int i = 0
-        while (id > 0 && id < 6 || candidatos.contains(id)) {
-            println("Valor já cadastrado! Digite um valor válido.")
-            id = System.in.newReader().readLine() as Integer
+        try {
+            System.out.println("Qual o id da pessoa candidata? [Somente números acima de 6]\n")
+            Integer id = System.in.newReader().readLine() as Integer
+            for (PessoaFisica candidato : (candidatos as List<PessoaFisica>)) {
+                if (candidato.id == id) {
+                    println("O id dessa pessoa candidata já existe! Registre outro valor!")
+                    id = System.in.newReader().readLine() as Integer
+                }
+            }
+
+            System.out.println("----------------------------")
+            System.out.println("Qual o nome?\n")
+            String nome = System.in.newReader().readLine()
+
+            System.out.println("----------------------------")
+            System.out.println("Qual o email?\n")
+            String email = System.in.newReader().readLine()
+
+            System.out.println("----------------------------")
+            System.out.println("Qual a idade?\n")
+            Integer idade = System.in.newReader().readLine() as Integer
+
+            System.out.println("----------------------------")
+            System.out.println("Qual o cpf?")
+            String identificador = System.in.newReader().readLine()
+
+            System.out.println("----------------------------")
+            System.out.println("Qual estado reside? ")
+            String estado = System.in.newReader().readLine()
+
+            System.out.println("----------------------------")
+            System.out.println("Qual o cep? ")
+            String cep = System.in.newReader().readLine()
+
+            System.out.println("----------------------------")
+            System.out.println("Faça uma descrição breve.")
+            String descricao = System.in.newReader().readLine()
+
+            System.out.println("----------------------------")
+            System.out.println("Quantas competências deseja cadastrar? ")
+            Integer quantidadeCompetencias = System.in.newReader().readLine() as Integer
+            ArrayList<String> competenciasParaAdicionar = new ArrayList(5)
+
+            for (int i = 0; i < quantidadeCompetencias; i++) {
+                println("Qual a " + i + 1 + " competência?")
+                String competencia = System.in.newReader().readLine()
+                competenciasParaAdicionar.add(competencia)
+            }
+
+            return new PessoaFisica(id, nome, email, idade, identificador,
+                    estado, cep, descricao, competenciasParaAdicionar)
+        } catch (NumberFormatException ignored) {
+            println("Valor inválido, letras e símbolos não são aceitos! ")
         }
-
-        System.out.println("----------------------------")
-        System.out.println("Qual o nome?\n")
-        String nome = System.in.newReader().readLine()
-
-        System.out.println("----------------------------")
-        System.out.println("Qual o email?\n")
-        String email = System.in.newReader().readLine()
-
-        System.out.println("----------------------------")
-        System.out.println("Qual a idade?\n")
-        Integer idade = System.in.newReader().readLine() as Integer
-
-        System.out.println("----------------------------")
-        System.out.println("Qual o cpf?")
-        String identificador = System.in.newReader().readLine()
-
-        System.out.println("----------------------------")
-        System.out.println("Qual estado reside? ")
-        String estado = System.in.newReader().readLine()
-
-        System.out.println("----------------------------")
-        System.out.println("Qual o cep? ")
-        String cep = System.in.newReader().readLine()
-
-        System.out.println("----------------------------")
-        System.out.println("Faça uma descrição breve.")
-        String descricao = System.in.newReader().readLine()
-
-        System.out.println("----------------------------")
-        System.out.println("Quantas competências deseja cadastrar? ")
-        Integer quantidadeCompetencias = System.in.newReader().readLine() as Integer
-        ArrayList<String> competenciasParaAdicionar = new ArrayList(5)
-
-        for (i = 0; i < quantidadeCompetencias; i++) {
-            println("Qual a " + i+1 + " competência?")
-            String competencia = System.in.newReader().readLine()
-            competenciasParaAdicionar.add(competencia)
-        }
-
-        return new PessoaFisica(id, nome, email, idade, identificador,
-                estado, cep, descricao, competenciasParaAdicionar)
     }
 
 
