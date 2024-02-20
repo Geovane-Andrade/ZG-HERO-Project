@@ -1,12 +1,11 @@
 package com.acelerazg.linketinder
 
 import com.acelerazg.linketinder.controller.PessoaFisicaController
-import com.acelerazg.linketinder.model.PessoaFisica
-import com.acelerazg.linketinder.model.PessoaJuridica
+import com.acelerazg.linketinder.controller.PessoaJuridicaController
 
 //Geovane de Andrade
 PessoaFisicaController pessoaFisicaController = new PessoaFisicaController()
-PessoaJuridica pessoaJuridica = new PessoaJuridica()
+PessoaJuridicaController pessoaJuridicaController = new PessoaJuridicaController()
 
 println("---------------------------------")
 println("Seja bem vindo! Gostaria de reproduzir o Linketinder? [S/N]");
@@ -20,7 +19,8 @@ try {
                 "[1] Listar Candidatos\n" +
                 "[2] Listar Empresas\n" +
                 "[3] Criar Candidato\n" +
-                "[4] Encerrar programa."
+                "[4] Criar Empresa\n" +
+                "[5] Encerrar programa."
         )
 
         Integer resposta = System.in.newReader().readLine() as Integer
@@ -30,19 +30,24 @@ try {
 
         switch (resposta) {
             case 1: {
-                pessoaFisicaController.preCadastrar()
+                pessoaFisicaController.preCadastrarCandidatos()
                 pessoaFisicaController.listarPessoas()
                 break
             }
             case 2: {
-                pessoaJuridica.listarPessoas()
+                pessoaJuridicaController.preCadastrarEmpresas()
+                pessoaJuridicaController.listarPessoas()
                 break
             }
             case 3:{
                 pessoaFisicaController.adicionarCandidato(pessoaFisicaController.criarCandidato())
                 break
             }
-            case 4: {
+            case 4:{
+                pessoaJuridicaController.adicionarEmpresa(pessoaJuridicaController.criarEmpresa())
+                break
+            }
+            case 5: {
                 reproduz = "n"
                 System.out.println("Encerrando...")
                 break;
@@ -53,6 +58,6 @@ try {
         }
     }
     if (reproduz.equalsIgnoreCase("n")) System.out.println("Até a próxima!")
-} catch (NumberFormatException e) {
+} catch (NumberFormatException ignored) {
     println("Valor inválido, letras e símbolos não são aceitos! ")
 }
